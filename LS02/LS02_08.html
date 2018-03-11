@@ -47,18 +47,17 @@
             // ctx.ellipse(100, 100, 50, 75, 45 * Math.PI / 180, 0, 2 * Math.PI); //倾斜45°角ctx.stroke();
             ctx.stroke();
             ctx.restore();
+            ctx.save();
 
         }
 
         //思考如何写出绘制五边形方法
         function drawTriangle(ctx) {
-          ctx.triangle(100,100,200,100,200,200,150,250,100,200);
-          ctx.save();
+          ctx.triangle(200,200,300,200,300,300,250,350,200,300);
+          ctx.beginPath();
           ctx.fillStyle = 'blue';
           ctx.strokeStyle = 'yellow'; 
           ctx.lineWidth = 10;
-          ctx.beginPath();
-          ctx.rect();
           ctx.stroke();
         }
         //思考如何扩展context，使之具有context.strokeTriangle; context.fillTriangle 

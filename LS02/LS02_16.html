@@ -48,18 +48,18 @@
             ctx.clip(); 
             
             // 绘制第二个圆 
-            ctx.beginPath(); ctx.fillStyle = '#333';
+            ctx.beginPath(); ctx.fillStyle = 'green';
             ctx.arc(cx + 100, cy, radius, 0, Math.PI * 2, false);
             ctx.fill();
             //ctx.clip(); 
             
             // 绘制第三个圆 
             ctx.beginPath();
-            ctx.fillStyle = 'cornsilk';
+            ctx.fillStyle = 'orange';
             ctx.arc(cx, cy + 100, radius, 0, Math.PI * 2, false);
             ctx.fill(); 
             //ctx.clip();
-            ctx.restore();
+            //ctx.restore();
             
             // 绘制第四个圆 
             ctx.beginPath();
@@ -67,7 +67,8 @@
             ctx.lineWidth = 10;
             ctx.arc(cx, cy, radius, 0, Math.PI * 2, false);
             ctx.stroke();
-            ctx.restore();
+            //ctx.clip();
+            //ctx.restore();
         }
     </script>
 </head>
