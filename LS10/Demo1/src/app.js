@@ -32,52 +32,51 @@ var HelloWorldLayer = cc.Layer.extend({
         },this));
         */
 
-        /*
-        //间隔动作(ActionInterval)练习一 移动、跳跃、旋转
-        this.sprites[0].runAction(cc.moveBy(2.0,100,0));
-        this.sprites[0].runAction(cc.moveBy(2.0,cc.p(100,0)));
-        this.sprites[0].runAction(cc.moveTo(2.0,0,0));
-        this.sprites[0].runAction(cc.moveTo(2.0,cc.p(0,0)));
 
-        this.sprites[1].runAction(cc.jumpBy(2.0,100,0,100,2));
-        this.sprites[1].runAction(cc.jumpBy(2.0,cc.p(100,0),100,2));
-        this.sprites[1].runAction(cc.jumpTo(2.0,100,100,100,2));
-        this.sprites[1].runAction(cc.jumpTo(2.0,cc.p(100,100),100,2));
+        // //间隔动作(ActionInterval)练习一 移动、跳跃、旋转
+        // this.sprites[0].runAction(cc.moveBy(2.0,100,0));
+        // this.sprites[0].runAction(cc.moveBy(2.0,cc.p(100,0)));
+        // this.sprites[0].runAction(cc.moveTo(2.0,0,0));
+        // this.sprites[0].runAction(cc.moveTo(2.0,cc.p(0,0)));
+        //
+        // this.sprites[1].runAction(cc.jumpBy(2.0,100,0,100,2));
+        // this.sprites[1].runAction(cc.jumpBy(2.0,cc.p(100,0),100,2));
+        // this.sprites[1].runAction(cc.jumpTo(2.0,100,100,100,2));
+        // this.sprites[1].runAction(cc.jumpTo(2.0,cc.p(100,100),100,2));
+        //
+        // this.sprites[2].runAction(cc.rotateBy(2.0,90,0));
+        // this.sprites[2].runAction(cc.rotateBy(2.0,0,90));
+        // this.sprites[2].runAction(cc.rotateTo(2.0,90,0));
 
-        this.sprites[2].runAction(cc.rotateBy(2.0,90,0));
-        this.sprites[2].runAction(cc.rotateBy(2.0,0,90));
-        this.sprites[2].runAction(cc.rotateTo(2.0,90,0));
-        */
 
-        /*
+
         //间隔动作(ActionInterval)练习二 缩放 淡入淡出
         //this.sprites[0].runAction(cc.scaleBy(2.0,0.5));
         //this.sprites[0].runAction(cc.scaleBy(2.0,0.8,0.5));
-        this.sprites[0].runAction(cc.scaleTo(2.0,1.2,1.2));
+        // this.sprites[0].runAction(cc.scaleTo(2.0,1.2,1.2));
+        // this.sprites[1].runAction(cc.fadeOut(2.0));
+        // this.sprites[2].setOpacity(0);
+        // this.sprites[2].runAction(cc.fadeIn(5.0));
 
-        this.sprites[1].runAction(cc.fadeOut(2.0));
-        this.sprites[2].setOpacity(0);
-        this.sprites[2].runAction(cc.fadeIn(5.0));
-        */
 
-        /*
+
         //间隔动作(ActionInterval)练习三 闪烁 进度条 颜色
-        this.sprites[0].runAction(cc.blink(20.0,10));
+        // this.sprites[0].runAction(cc.blink(20.0,10));
+        //
+        // var timer = new cc.ProgressTimer(this.sprites[1]);
+        // timer.x = this.sprites[1].x+100;
+        // timer.y = this.sprites[1].y;
+        // this.addChild(timer);
+        // timer.type = cc.ProgressTimer.TYPE_RADIAL;
+        // timer.type = cc.ProgressTimer.TYPE_BAR;
+        // timer.midPoint = cc.p(0,0);
+        // timer.barChangeRate = cc.p(0, 1);
+        // timer.runAction(cc.progressFromTo(5.0,0,50));
+        // timer.runAction(cc.progressTo(5.0,50));
+        //
+        // this.sprites[2].runAction(cc.tintTo(5.0,128,0,0));
+        // this.sprites[2].runAction(cc.tintBy(5.0,128,128,128));
 
-        var timer = new cc.ProgressTimer(this.sprites[1]);
-        timer.x = this.sprites[1].x+100;
-        timer.y = this.sprites[1].y;
-        this.addChild(timer);
-        //timer.type = cc.ProgressTimer.TYPE_RADIAL;
-        timer.type = cc.ProgressTimer.TYPE_BAR;
-        timer.midPoint = cc.p(0,0);
-        timer.barChangeRate = cc.p(0, 1);
-        //timer.runAction(cc.progressFromTo(5.0,0,50));
-        timer.runAction(cc.progressTo(5.0,50));
-
-        this.sprites[2].runAction(cc.tintTo(5.0,128,0,0));
-        //this.sprites[2].runAction(cc.tintBy(5.0,128,128,128));
-        */
 
         /*
         //组合动画
@@ -107,25 +106,25 @@ var HelloWorldLayer = cc.Layer.extend({
         */
 
         //帧动画 方法一
-        var animation = new cc.Animation();
-        for (var i = 1; i < 15; i++) {
-            //var frameName = "res/Animation/grossini_dance_" + ((i < 10) ? ("0" + i) : i) + ".png";
-            var frameName = res["sp_animation_"+i];
-            animation.addSpriteFrameWithFile(frameName);
-        }
+        // var animation = new cc.Animation();
+        // for (var i = 1; i < 15; i++) {
+        //     //var frameName = "res/Animation/grossini_dance_" + ((i < 10) ? ("0" + i) : i) + ".png";
+        //     var frameName = res["sp_animation_"+i];
+        //     animation.addSpriteFrameWithFile(frameName);
+        // }
+        //
+        // //for (var i = 1; i < 7; i++) {
+        // //    var frameName = "res/Animation3/pao_" + i + ".png";
+        // //    animation.addSpriteFrameWithFile(frameName);
+        // //}
+        //
+        // animation.setDelayPerUnit(1 / 1);
+        // animation.setRestoreOriginalFrame(true);
+        // var animateAction = cc.animate(animation);
+        // this.sprites[0].runAction(cc.repeatForever(animateAction));
 
-        //for (var i = 1; i < 7; i++) {
-        //    var frameName = "res/Animation3/pao_" + i + ".png";
-        //    animation.addSpriteFrameWithFile(frameName);
-        //}
-
-        animation.setDelayPerUnit(1 / 1);
-        animation.setRestoreOriginalFrame(true);
-        var animateAction = cc.animate(animation);
-        this.sprites[0].runAction(cc.repeatForever(animateAction));
 
 
-        /*
         //帧动画 方法二
         cc.spriteFrameCache.addSpriteFrames(res.sp_animation_plist);
         var spriteFrames = [];
@@ -135,11 +134,10 @@ var HelloWorldLayer = cc.Layer.extend({
             spriteFrames.push(frame);
         }
         var animation = new cc.Animation(spriteFrames, 0.2, 2);
-        //animation.setDelayPerUnit(1 / 30);
+        animation.setDelayPerUnit(1 / 10);
         animation.setRestoreOriginalFrame(true);
         var animateAction = cc.animate(animation);
         this.sprites[1].runAction(animateAction.repeatForever());
-        */
 
         return true;
     }
